@@ -1,0 +1,17 @@
+  default: &default
+    adapter: postgresql
+    host: localhost
+    port: 5432
+    pool: 5
+    timeout: 5000
+    user: playground
+    password: playground
+
+  development:
+    <<: *default
+    database: kea_backend_development
+
+  test:
+    <<: *default
+    database: kea_backend_test
+    host: postgres
